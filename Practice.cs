@@ -62,6 +62,18 @@ namespace ConsoleApp7
             //3. BOOL CONVERSION
             bool hasFree2Pages = false;//to string, to char, to int
 
+            //string hasFree2Pages_str = hasFree2Pages;                       //Implicit. Fail. Not Compiling
+            //string hasFree2Pages_str1 = (string)hasFree2Pages;              //Explicit. Fail. Not Compiling
+            string hasFree2Pages_str2 = Convert.ToString(hasFree2Pages);    //Convert. I think OK. instead of |false| returned |False|
+
+            //char hasFree2Pages_char = hasFree2Pages;                   //Implicit. Fail. Not Compiling
+            //char hasFree2Pages_char1 = (char)hasFree2Pages;            //Explicit. Fail. Not Compiling
+            //char hasFree2Pages_char2 = Convert.ToChar(hasFree2Pages);  //Convert. Fail. System.InvalidCastException
+
+            //int hasFree2Pages_int = hasFree2Pages;                    //Implicit. Fail. Not Compiling
+            //int hasFree2Pages_int1 = (int)hasFree2Pages;              //Explicit. Fail. Not Compiling
+            int hasFree2Pages_int2 = Convert.ToInt32(hasFree2Pages);  //Convert. Fail. instead of |false| returned |0|
+
             //4. DECIMAL CONVERSION
             double visaPrice = 60;//to int, to string
             double finterPrintsPrice = 55.2;//to int, to string
