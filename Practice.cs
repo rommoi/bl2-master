@@ -22,9 +22,9 @@ namespace ConsoleApp7
 
             char place = '3';//to int
 
-            int place_int = place;                   //Implicit. 
-            int place_int1 = (int)place;             //Explicit.
-            int place_int2 = Convert.ToInt32(place); //Convert.
+            int place_int = place;                   //Implicit. Fail. result 51
+            int place_int1 = (int)place;             //Explicit. Fail. result 51
+            int place_int2 = Convert.ToInt32(place); //Convert.  Fail. result 51
 
             char hasFingerPrints = '0';//to boolean
 
