@@ -80,8 +80,7 @@ namespace ConsoleApp7
             //int visaPrice_int = visaPrice;                    //Implicit. Fail. Not Compiling
             int visaPrice_int1 = (int)visaPrice;              //Explicit. OK. result 60
             int visaPrice_int2 = Convert.ToInt32(visaPrice);  //Convert. OK. result 60
-            int a = 5;
-            a++;
+             
             //string visaPrice_str = visaPrice;                    //Implicit. Fail. Not Compiling
             //string visaPrice_str1 = (string)visaPrice;           //Explicit. Fail. Not Compiling
             string visaPrice_str2 = Convert.ToString(visaPrice); //Convert. OK. result "60"
@@ -100,9 +99,26 @@ namespace ConsoleApp7
 
             //4. INT CONVERSION
             int birthYear = 2000;//to string, to double, to char
-            char birhtYearChar = (char)birthYear;
+
+            //string birthYear_str = birthYear;                      //Implicit. Fail. Not Compiling
+            //string birthYear_str1 = (string)birthYear;             //Explicit. Fail. Not Compiling
+            string birthYear_str2 = Convert.ToString(birthYear);   //Convert. OK. result "2000"
+            string birthYear_str3 = birthYear.ToString();          //obj.ToString(). OK. result "2000"
+
+            double birthYear_double = birthYear;                    //Implicit. OK. result 2000
+            double birthYear_double1 = (double)birthYear;           //Explicit. OK. result 2000
+            double birthYear_double2 = Convert.ToDouble(birthYear); //Convert. OK. result 2000
+
+            //char birthYear_char = birthYear;                        //Implicit. Fail. Not Compiling
+            char birthYear_char1 = (char)birthYear;                 //Explicit. Fail. result 'ߐ'
+            char birthYear_char2 = Convert.ToChar(birthYear);       //Convert. Fail. result 'ߐ'
 
             int hasPhotoInt = 1;//to boolean
+
+            //bool hasPhotoInt_bool = hasPhotoInt;                     //Implicit. Fail. Not Compiling
+            //bool hasPhotoInt_bool1 = (bool)hasPhotoInt;              //Explicit. Fail. Not Compiling
+            bool hasPhotoInt_bool2 = Convert.ToBoolean(hasPhotoInt); //Convert. Fail. result true
+            
         }
     }
 }
