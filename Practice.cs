@@ -76,7 +76,27 @@ namespace ConsoleApp7
 
             //4. DECIMAL CONVERSION
             double visaPrice = 60;//to int, to string
+
+            //int visaPrice_int = visaPrice;                    //Implicit. Fail. Not Compiling
+            int visaPrice_int1 = (int)visaPrice;              //Explicit. OK. result 60
+            int visaPrice_int2 = Convert.ToInt32(visaPrice);  //Convert. OK. result 60
+            int a = 5;
+            a++;
+            //string visaPrice_str = visaPrice;                    //Implicit. Fail. Not Compiling
+            //string visaPrice_str1 = (string)visaPrice;           //Explicit. Fail. Not Compiling
+            string visaPrice_str2 = Convert.ToString(visaPrice); //Convert. OK. result "60"
+            string visaPrice_str3 = visaPrice.ToString();        //ToString(). OK. result "60"
+
             double finterPrintsPrice = 55.2;//to int, to string
+
+            //int finterPrintsPrice_int = finterPrintsPrice;                    //Implicit. Fail. Not Compiling
+            int finterPrintsPrice_int1 = (int)finterPrintsPrice;              //Explicit. Fail. result 55
+            int finterPrintsPrice_int2 = Convert.ToInt32(finterPrintsPrice);  //Convert. Fail. result 55
+
+            //string finterPrintsPrice_str = finterPrintsPrice;                     //Implicit. Fail. Not Compiling
+            //string finterPrintsPrice_str1 = (string)finterPrintsPrice;            //Explicit. Fail. Not Compiling
+            string finterPrintsPrice_str2 = Convert.ToString(finterPrintsPrice);  //Convert. OK. result "55.2"
+            string finterPrintsPrice_str3 = finterPrintsPrice.ToString();         //ToString(). OK. result "55.2"
 
             //4. INT CONVERSION
             int birthYear = 2000;//to string, to double, to char
